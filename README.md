@@ -1,4 +1,4 @@
-![Project Logo](Receipt_Gen_Logo.svg)
+![Project Logo](/Receipt_Gen_Logo.svg)
 
 # Receipt Gen
 

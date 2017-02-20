@@ -1,0 +1,83 @@
+html
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet" type="text/css" href="style.css")
+
+    style(type='text/css').
+      body {
+        margin: 5% 10%;
+        color: #000;
+      }
+
+      h2 {
+        font-size: 24pt;
+        font-family: serif;
+        color: grey;
+        text-align: left;
+        width: 100%;
+      }
+
+      .subheader {
+        font-family: sans-serif;
+        font-size: 12pt;
+      }
+
+      .subheader table {
+        border: none;
+      }
+
+      .grey {
+        color: grey;
+      }
+
+      .transactions {
+        display: block;
+        margin: 100px auto;
+        width: 80%;
+      }
+
+      .transactions table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .transactions tr {
+        border: 1px solid grey;
+      }
+      .transactions .header {
+        background-color: #CCC;
+      }
+  body
+    h2 #{company_name}
+    .subheader
+      table
+        tr
+          td Phone
+          td.grey #{phone}
+        tr
+          td Email
+          td.grey #{email}
+        tr
+          td Receipt Date
+          td.grey #{date}
+        tr
+          td Receipt Number
+          td.grey #{receipt_number}
+        tr
+          td Recipient Name
+          td.grey #{recipient_name}
+
+
+    .transactions
+      table
+        tr.header
+          td Description
+          td Amount
+        each row in transactions
+          tr
+            td #{row.description}
+            td $#{row.amount}
+
+      p Total: $#{total}
+

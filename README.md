@@ -13,7 +13,7 @@ cp .settings-example .settings
 
 ## Usage
 
-You will notice there is a usage.txt file. Edit this to fit your needs. When you're ready to generate a receipt, run the following:
+You will notice there is a usage.js file. Edit this to fit your needs. When you're ready to generate a receipt, run the following:
 
 ```
 cat usage.js | node

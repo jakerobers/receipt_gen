@@ -1,3 +1,5 @@
+![Project Logo](./Receipt_Gen_Logo.svg)
+
 # Receipt Gen
 
 This is intended to be an easy-to-use receipt generator. Simply edit the usage file and run the program. You can also use the usage file as a guide on how to integrate this with a larger program.

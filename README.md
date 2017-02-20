@@ -1,7 +1,6 @@
 # Receipt Gen
 
-This is intended to be an easy-to-use receipt generator based on commandline arguments provided to the program. This works well if you are reading a spreadsheet and want to feed data through this program.
-
+This is intended to be an easy-to-use receipt generator. Simply edit the usage file and run the program. You can also use the usage file as a guide on how to integrate this with a larger program.
 
 ## Setup
 

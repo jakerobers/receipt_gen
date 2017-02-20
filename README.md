@@ -5,9 +5,20 @@ This is intended to be an easy-to-use receipt generator based on commandline arg
 
 ## Setup
 
-Copy the `.settings-example` to `.settings`.
+Check to make sure you have the latest npm and node versions.
+
+```
+npm install
+cp .settings-example .settings
+```
 
 ## Usage
+
+You will notice there is a usage.txt file. Edit this to fit your needs. When you're ready to generate a receipt, run the following:
+
+```
+cat usage.txt | node
+```
 
 ## User Stories
 
@@ -21,8 +32,9 @@ I wanted to write a couple of user stories to brainstorm on the various usages.
 
 -[x] As a user, I would like a receipt number that automatically increments.
 
+-[x] As a user, I would like to specify the destination for the receipt
+
 -[x] As a user, I would like to specify the recipent for the receipt.
 
--[x] As a user, I would like to be able to provide a 2D array in an argument to generate a table of receipt info
-
+-[x] As a user, I would like to be able to provide an array to generate a table of receipt info
 

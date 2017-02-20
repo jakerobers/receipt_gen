@@ -130,6 +130,9 @@ exports.main = (options) => {
       receipt_number: receipt_number
     };
   }).then((receipt_obj) => {
+    if (!options.receipt_destination) {
+      options.receipt_destination = "";
+    }
     const filename = options.receipt_destination + receipt_obj.date + "." + receipt_obj.receipt_number + ".pdf";
 
     // Save Receipt

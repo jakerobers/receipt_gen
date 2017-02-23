@@ -11,31 +11,32 @@ Check to make sure you have the latest npm and node versions.
 ```
 npm install
 cp .settings-example .settings
+cp sample-usage.js usage.js
 ```
 
 ## Usage
 
-You will notice there is a usage.js file. Edit this to fit your needs. When you're ready to generate a receipt, run the following:
+Edit the usage.js file to fit your needs. When you're ready to generate a receipt, run the following:
 
 ```
-cat usage.js | node
+node usage.js
 ```
 
-## User Stories
+## Requirements
 
-I wanted to write a couple of user stories to brainstorm on the various usages.
+I wanted to write a couple of requirements to brainstorm on the various usages.
 
-- [x] As a user, I would like to provide a company name
+- [x] I would like to provide a company name
 
-- [x] As a user, I would like to provide an address, email, and phone number on the receipt.
+- [x] I would like to provide an address, email, and phone number on the receipt.
 
-- [x] As a user, I would like the program to include todays date.
+- [x] I would like the program to include todays date.
 
-- [x] As a user, I would like a receipt number that automatically increments.
+- [x] I would like a receipt number that automatically increments.
 
-- [x] As a user, I would like to specify the destination for the receipt
+- [x] I would like to specify the destination for the receipt
 
-- [x] As a user, I would like to specify the recipent for the receipt.
+- [x] I would like to specify the recipent for the receipt.
 
-- [x] As a user, I would like to be able to provide an array to generate a table of receipt info
+- [x] I would like to be able to provide an array to generate a table of receipt info
 

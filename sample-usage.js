@@ -26,6 +26,7 @@ receiptGen.main({
     company_name: company_name,
     phone: phone,
     email: email,
+    transactions: transactions,
     recipient_name: recipient_name,
     receipt_destination: receipt_destination
 });

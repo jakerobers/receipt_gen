@@ -108,7 +108,7 @@ exports.main = (options) => {
 
   //use .all in case we have additional promised-based values in the future.
   Promise.all([exports.getReceiptNumber()]).then((receipt_number) => {
-    const total = _.reduce(transactions, (acc, e) => {
+    const total = _.reduce(options.transactions, (acc, e) => {
       acc = acc + e.amount;
       return acc;
     }, 0);
@@ -123,7 +123,7 @@ exports.main = (options) => {
         date: date,
         receipt_number: receipt_number,
         recipient_name: options.recipient_name,
-        transactions: transactions,
+        transactions: options.transactions,
         total: total
       }),
       date: date,
@@ -132,8 +132,12 @@ exports.main = (options) => {
   }).then((receipt_obj) => {
     if (!options.receipt_destination) {
       options.receipt_destination = "";
+    } else if (options.receipt_destination.length > 0 && options.receipt_destination.substr(options.receipt_destination.length-1) !== "/") {
+      options.receipt_destination += "/"; 
     }
+
     const filename = options.receipt_destination + receipt_obj.date + "." + receipt_obj.receipt_number + ".pdf";
+    console.log(filename);
 
     // Save Receipt
     return new Promise((resolve, reject) => {
@@ -145,6 +149,8 @@ exports.main = (options) => {
         return resolve(res);
       });
     });
+  }).catch(function(err) {
+    console.error(err);
   });
 };
 

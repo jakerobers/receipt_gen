@@ -9,34 +9,28 @@ This is intended to be an easy-to-use receipt generator. Simply edit the usage f
 Check to make sure you have the latest npm and node versions.
 
 ```
-npm install
-cp .settings-example .settings
-cp sample-usage.js usage.js
+npm install -g receipt-gen
 ```
 
 ## Usage
 
-Edit the usage.js file to fit your needs. When you're ready to generate a receipt, run the following:
+You will setup your company information on the first run.
 
 ```
-node usage.js
+receipt-gen
 ```
 
-## Requirements
+If you want to edit this information, run:
 
-I wanted to write a couple of requirements to brainstorm on the various usages.
+```
+receipt-gen edit
+```
 
-- [x] I would like to provide a company name
+## Reverting Receipt Numbers
 
-- [x] I would like to provide an address, email, and phone number on the receipt.
+If you need to revert receipt numbers, the settings file is located at:
 
-- [x] I would like the program to include todays date.
-
-- [x] I would like a receipt number that automatically increments.
-
-- [x] I would like to specify the destination for the receipt
-
-- [x] I would like to specify the recipent for the receipt.
-
-- [x] I would like to be able to provide an array to generate a table of receipt info
+```
+$NODE_PATH/receipt_gen/settings.json
+```
 

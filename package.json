@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "receipt-gen": "bin/receipt-gen.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jakerobers/receipt_gen.git"
@@ -20,5 +23,18 @@
   "bugs": {
     "url": "https://github.com/jakerobers/receipt_gen/issues"
   },
-  "homepage": "https://github.com/jakerobers/receipt_gen#readme"
+  "homepage": "https://github.com/jakerobers/receipt_gen#readme",
+  "dependencies": {
+    "html-pdf": "^2.1.0",
+    "inquirer": "^3.0.4",
+    "jsonfile": "^2.4.0",
+    "promise": "^7.1.1",
+    "pug": "^2.0.0-beta11",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
 }
